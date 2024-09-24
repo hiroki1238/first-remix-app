@@ -5,6 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import "./global.scss";
 
 export default function App() {
   return (
@@ -17,9 +18,9 @@ export default function App() {
       </head>
       <body>
         <div id="sidebar">
-          <h1>Remix Contacts</h1>
-          <div>
-            <Form id="search-form" role="search">
+          <h1 className="text-blue-700">Remix Contacts</h1>
+          <div className="bg-cyan-100 p-4 rounded-md">
+            <Form id="search-form" role="search" className="mb-4">
               <input
                 id="q"
                 aria-label="Search contacts"
@@ -30,16 +31,28 @@ export default function App() {
               <div id="search-spinner" aria-hidden hidden={true} />
             </Form>
             <Form method="post">
-              <button type="submit">New</button>
+              <button type="submit" className="bg-blue-500 text-white px-2">
+                New
+              </button>
             </Form>
           </div>
-          <nav>
-            <ul>
+          <nav className="mt-4">
+            <ul className="space-y-2">
               <li>
-                <a href={`/contacts/1`}>Your Name</a>
+                <a
+                  href={`/contacts/1`}
+                  className="text-blue-500 hover:underline"
+                >
+                  Your Name
+                </a>
               </li>
               <li>
-                <a href={`/contacts/2`}>Your Friend</a>
+                <a
+                  href={`/contacts/2`}
+                  className="text-blue-500 hover:underline"
+                >
+                  Your Friend
+                </a>
               </li>
             </ul>
           </nav>

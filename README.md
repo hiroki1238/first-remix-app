@@ -36,3 +36,11 @@ Make sure to deploy the output of `remix build`
 
 - `build/server`
 - `build/client`
+
+### MEMO
+
+- コンテナの中で何か行いたい場合（コンテナ内の Shell）
+  docker run -it --mount type=bind,src=$(pwd),dst=/app remix-app-1_remix:latest /bin/sh
+
+- 抜けたい場合
+  exit
