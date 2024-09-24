@@ -1,0 +1,11 @@
+version: "3"
+services:
+  remix:
+    build: .
+    ports:
+      - 5173:5173 # ホストマシンの5173番ポートをコンテナの5173番ポートにマッピング
+    volumes:
+      - .:/app
+# docker.compose.ymlは、Docker Composeの設定ファイルです。このファイルを使って、Docker Composeを使って複数のコンテナを一括管理することができます。
+# このファイルでは、remixという名前のサービスを定義しています。このサービスは、Dockerfileを使ってイメージをビルドしています。
+# ホストマシンのカレントディレクトリを/appディレクトリにマウントしています。
